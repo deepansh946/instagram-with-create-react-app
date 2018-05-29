@@ -21,7 +21,7 @@ class Photo extends React.Component {
             />
           </Link>
 
-          <CSSTransitionGroup
+          {/* <CSSTransitionGroup
             transitionName="like"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
@@ -29,7 +29,7 @@ class Photo extends React.Component {
             <span key={post.likes} className="likes-heart">
               {post.likes}
             </span>
-          </CSSTransitionGroup>
+          </CSSTransitionGroup> */}
         </div>
 
         <figcaption>
@@ -43,7 +43,7 @@ class Photo extends React.Component {
               &hearts; {post.likes}
             </button>
 
-            <Link to={`/view/${post.code}`} className="button">
+            <Link to={`/photos/${post.code}`} className="button">
               <span className="comment-count">
                 <span className="speech-bubble" />{" "}
                 {comments[post.code] ? comments[post.code].length : 0}

@@ -33,7 +33,7 @@ class Comments extends React.Component {
   }
 
   render() {
-    const comments = this.props.comments[this.props.params.postId] || [];
+    const comments = this.props.comments[this.props.match.postId] || [];
     return (
       <div className="comments">
         {comments.map(this.renderComment)}
